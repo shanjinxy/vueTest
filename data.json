@@ -1,0 +1,176 @@
+{
+  "code": 200,
+  "message": "Success",
+  "data": {
+    "latestYield": {
+      "date": "2017-02-20",
+      "unitYield": "3.27610",
+      "yearlyRoe": "0.04156"
+    },
+    "privilege": {
+      "value": 1888
+    },
+    "yieldLine": [
+      {
+        "date": "2017-01-20",
+        "unitYield": "0.95670",
+        "yearlyRoe": "0.03895"
+      },
+      {
+        "date": "2017-01-21",
+        "unitYield": "0.95220",
+        "yearlyRoe": "0.03832"
+      },
+      {
+        "date": "2017-01-22",
+        "unitYield": "0.95220",
+        "yearlyRoe": "0.03770"
+      },
+      {
+        "date": "2017-01-23",
+        "unitYield": "0.98390",
+        "yearlyRoe": "0.03725"
+      },
+      {
+        "date": "2017-01-24",
+        "unitYield": "0.94440",
+        "yearlyRoe": "0.03664"
+      },
+      {
+        "date": "2017-01-25",
+        "unitYield": "0.90440",
+        "yearlyRoe": "0.03588"
+      },
+      {
+        "date": "2017-01-26",
+        "unitYield": "0.68690",
+        "yearlyRoe": "0.03383"
+      },
+      {
+        "date": "2017-01-27",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.03214"
+      },
+      {
+        "date": "2017-01-28",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.03048"
+      },
+      {
+        "date": "2017-01-29",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.02882"
+      },
+      {
+        "date": "2017-01-30",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.02700"
+      },
+      {
+        "date": "2017-01-31",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.02539"
+      },
+      {
+        "date": "2017-02-01",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.02399"
+      },
+      {
+        "date": "2017-02-02",
+        "unitYield": "0.64330",
+        "yearlyRoe": "0.02376"
+      },
+      {
+        "date": "2017-02-03",
+        "unitYield": "0.89810",
+        "yearlyRoe": "0.02512"
+      },
+      {
+        "date": "2017-02-04",
+        "unitYield": "0.89510",
+        "yearlyRoe": "0.02647"
+      },
+      {
+        "date": "2017-02-05",
+        "unitYield": "0.89510",
+        "yearlyRoe": "0.02781"
+      },
+      {
+        "date": "2017-02-06",
+        "unitYield": "0.61780",
+        "yearlyRoe": "0.02768"
+      },
+      {
+        "date": "2017-02-07",
+        "unitYield": "0.62990",
+        "yearlyRoe": "0.02761"
+      },
+      {
+        "date": "2017-02-08",
+        "unitYield": "0.80140",
+        "yearlyRoe": "0.02845"
+      },
+      {
+        "date": "2017-02-09",
+        "unitYield": "0.80540",
+        "yearlyRoe": "0.02932"
+      },
+      {
+        "date": "2017-02-10",
+        "unitYield": "0.81920",
+        "yearlyRoe": "0.02890"
+      },
+      {
+        "date": "2017-02-11",
+        "unitYield": "0.82450",
+        "yearlyRoe": "0.02852"
+      },
+      {
+        "date": "2017-02-12",
+        "unitYield": "0.82460",
+        "yearlyRoe": "0.02814"
+      },
+      {
+        "date": "2017-02-13",
+        "unitYield": "0.80340",
+        "yearlyRoe": "0.02914"
+      },
+      {
+        "date": "2017-02-14",
+        "unitYield": "0.80440",
+        "yearlyRoe": "0.03007"
+      },
+      {
+        "date": "2017-02-15",
+        "unitYield": "0.77340",
+        "yearlyRoe": "0.02992"
+      },
+      {
+        "date": "2017-02-16",
+        "unitYield": "0.72230",
+        "yearlyRoe": "0.02948"
+      },
+      {
+        "date": "2017-02-17",
+        "unitYield": "0.70580",
+        "yearlyRoe": "0.02887"
+      },
+      {
+        "date": "2017-02-18",
+        "unitYield": "0.70360",
+        "yearlyRoe": "0.02822"
+      },
+      {
+        "date": "2017-02-19",
+        "unitYield": "0.82380",
+        "yearlyRoe": "0.02822"
+      },
+      {
+        "date": "2017-02-20",
+        "unitYield": "3.27610",
+        "yearlyRoe": "0.04156"
+      }
+    ]
+  }
+}
