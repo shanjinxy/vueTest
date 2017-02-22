@@ -5,7 +5,7 @@ import App from './App';
 import VueRouter from 'vue-router';
 import ratings from 'components/ratings/ratings';
 import goods from 'components/goods/goods'
-import seller from 'components/seller/seller.vue';
+import seller from 'components/seller/seller';
 
 Vue.use(VueRouter);
 
