@@ -30,53 +30,44 @@
       <i class="icon-keyboard_arrow_right"></i>
     </div>
     <div class="background">
-    <img :src="seller.avatar" width="100%" height="100%"/>
+      <img :src="seller.avatar" width="100%" height="100%"/>
     </div>
-    <!--<transition name="fade">-->
-    <!--<div class="detail" v-if="detailShow">-->
-    <!--<div class="detail-wrapper clearfix">-->
-    <!--<div class="detail-main">-->
-    <!--<h1 class="name">{{seller.name}}</h1>-->
-    <!--<div class="star-wrapper">-->
-    <!--</div>-->
-    <!--<div class="title">-->
-    <!--<div class="line"></div>-->
-    <!--<div class="text">优惠信息</div>-->
-    <!--<div class="lin"></div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</transition>-->
+    <transition name="fade">
+      <div v-if="detailShow" class="detail">
+        <div class="detail-wrapper clearfix">
+          <div class="detail-main">
+            <h1 class="name">{{seller.name}}</h1>
+            <div class="star-wrapper">
+              <star :size="48" v-bind:score="seller.score"></star>
+            </div>
+            <div class="title">
+              <div class="line"></div>
+              <div class="text">优惠信息</div>
+              <div class="line"></div>
+            </div>
+            <ul v-if="seller.supports" class="supports">
+              <li class="support-item" v-for="item in seller.supports">
+                <span class="icon" :class="iconClassMap[item.type]"></span>
+                <span class="text">{{item.description}}</span>
+              </li>
+            </ul>
+            <div class="title">
+              <div class="line"></div>
+              <div class="text">商家公告</div>
+              <div class="line"></div>
+            </div>
+            <div class="bulletin">{{seller.bulletin}}</div>
+          </div>
+        </div>
+        <div class="detail-close">
+          <i class="icon-close" @click="hideDetail()"></i>
+        </div>
+      </div>
+    </transition>
   </div>
   </div>
 </template>
-<script>
-  export default{
-    name: 'header',
-    props: {
-      seller: {
-        type: Object
-      }
-    },
-    created() {
-      this.iconClassMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
-    },
-    data() {
-      return {
-        detailShow: false
-      }
-    },
-    methods: {
-      showDetails() {
-        this.detailShow = true;
-      },
-      hideDetail() {
-        this.detailShow = false;
-      }
-    }
-  }
-</script>
+
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixin.styl"
   .header
@@ -154,13 +145,12 @@
         margin-left 2px
         line-height 24px
 
-
   .bulletin-wrapper
     position relative
     height 28px
     line-height 28px
     padding 0 22px 0 12px
-    background-color rgba(7,17,27,0.2)
+    background-color rgba(7, 17, 27, 0.2)
     font-size 12px
     font-weight 200
     white-space nowrap
@@ -182,4 +172,122 @@
       right 12px
       top: 8px
 
+  .background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    filter: blur(10px)
+    z-index -1
+
+  .detail
+    position fixed
+    background rgba(7, 17, 27, 0.8)
+    z-index: 100
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    backdrop-filter blur(10px)
+    /*可以实现filter的绝大多数效果，仅对背景生效*/
+    .detail-wrapper
+      min-height: 100%
+      width: 100%
+    .detail-main
+      margin-top: 64px
+      padding-bottom: 64px
+      .name
+        font-size 16px
+        font-weight 700
+        width: 100%
+        color: rgb(255, 255, 255)
+        line-height 16px
+        text-align center
+      .star-wrapper
+        margin 16px 11px 28px 0
+        text-align center
+      .title
+        display: flex
+        width: 80%
+        margin 0 auto 24px
+        .line
+          flex: 1
+          height: 1px
+          background rgba(255, 255, 255, 0.2)
+          margin auto
+        .text
+          padding 0 12px
+          font-size 14px
+          font-weight 700
+      .supports
+        padding: 0 0 28px 36px
+        .support-item
+          color: #fff
+          font-size: 12px
+          font-weight: 200
+          line-height 12px
+          padding 0 6px 12px 16px
+          .icon
+            vertical-align: top
+            width 16px
+            height 16px
+            background-size: 100% 100%
+            margin-right 6px
+            display: inline-block
+            &.decrease
+              bg-image('decrease_2')
+            &.discount
+              bg-image('discount_2')
+            &.invoice
+              bg-image('invoice_2')
+            &.guarantee
+              bg-image('guarantee_2')
+            &.special
+              bg-image('special_2')
+      .bulletin
+        padding 0 48px
+        font-size 12px
+        font-weight: 200
+        line-height 24px
+
+  .detail-close
+    position relative
+    width: 32px
+    height: 32px
+    font-size 32px
+    margin -64px auto
+    clear: both
+    color: rgba(255, 255, 255, 0.5)
+
 </style>
+<script>
+  import star from 'components/star/star'
+  export default{
+    name: 'header',
+    props: {
+      seller: {
+        type: Object
+      }
+    },
+    created() {
+      this.iconClassMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+    },
+    components: {
+      star
+    },
+    data() {
+      return {
+        detailShow: false
+      }
+    },
+    methods: {
+      showDetails() {
+        this.detailShow = true;
+      },
+      hideDetail() {
+        this.detailShow = false;
+      }
+    }
+  }
+</script>
