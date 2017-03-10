@@ -35,6 +35,5 @@ module.exports = {
     'no-unused-vars':0,
     'no-undef':0,
     "comma-dangle": ["error", "never"]
-
   }
 }
